@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adConfig: http://123.196.114.176/ot/thief/sys_advertise.txt
-  platform: 2
+  platform: 3
 --- !u!114 &394402466
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -53,7 +53,7 @@ public class ResultController : MonoBehaviour {
         }
         tfScoreBest.text = GameData.getLanguage().SearchForChildByTag("bestscore").Text+"\n"+best.ToString();
 
-        SocialManager.GetInstance().ReportScore("10010", GameData.score);
+        SocialManager.GetInstance().ReportScore("10011", GameData.score);
 
 	}
 	
