@@ -12,7 +12,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: Lanhang
-  productName: AmazingThief
+  productName: Jumping Monkey
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -68,7 +68,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.liuyi.thief
+  iPhoneBundleIdentifier: com.lv1.jump
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 0086036c33305704294abb2f69fd081d
@@ -163,7 +163,10 @@ PlayerSettings:
       m_Size: 48
     - m_Icon: {fileID: 0}
       m_Size: 36
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: iPhone
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
   locationUsageDescription: 

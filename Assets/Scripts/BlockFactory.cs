@@ -35,7 +35,7 @@ public class BlockFactory : MonoBehaviour {
 
     public GameObject CreatBlock()
     {
-        Object prefab = blockList[Random.Range(0, blockList.Length - 1)];
+        Object prefab = blockList[Random.Range(0, blockList.Length)];
 
         GameObject obj = Instantiate(prefab) as GameObject;
         GameObject obj2 = Instantiate(prefab) as GameObject;
