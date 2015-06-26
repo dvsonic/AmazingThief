@@ -21,16 +21,6 @@ public class ResultController : MonoBehaviour {
 
     void Awake()
     {
-        if(tfReplay)
-            tfReplay.text = GameData.getLanguage().SearchForChildByTag("replay").Text;
-        if(tfQuit)
-            tfQuit.text = GameData.getLanguage().SearchForChildByTag("quit").Text;
-        if (tfEnd)
-            tfEnd.text = GameData.getLanguage().SearchForChildByTag("end").Text;
-        if (tfShare)
-            tfShare.text = GameData.getLanguage().SearchForChildByTag("share").Text;
-        if(tfRecord)
-            tfRecord.text = GameData.getLanguage().SearchForChildByTag("record").Text;
 #if UNITY_ANDROID
         Destroy(btnRank.gameObject);
         Destroy(btnDiscuss.gameObject);
@@ -39,7 +29,7 @@ public class ResultController : MonoBehaviour {
 #endif
     }
 	void Start () {
-        tfScore.text = GameData.getLanguage().SearchForChildByTag("score").Text+"\n"+GameData.score.ToString();
+        tfScore.text = GameData.getLanguage("score")+"\n"+GameData.score.ToString();
         int best = PlayerPrefs.GetInt(BEST_SCORE);
         if (GameData.score >= best)
         {
@@ -51,7 +41,7 @@ public class ResultController : MonoBehaviour {
         {
             Record.SetActive(false);
         }
-        tfScoreBest.text = GameData.getLanguage().SearchForChildByTag("bestscore").Text+"\n"+best.ToString();
+        tfScoreBest.text = GameData.getLanguage("bestscore")+"\n" + best.ToString();
 
         SocialManager.GetInstance().ReportScore("20002", GameData.score);
 

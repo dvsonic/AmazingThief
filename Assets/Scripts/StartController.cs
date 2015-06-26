@@ -7,14 +7,9 @@ using GoogleMobileAds.Api;
 public class StartController : MonoBehaviour {
 
 	// Use this for initialization
-    public Text tfStart;
     public Transform Block;
     void Awake()
     {
-        if (tfStart)
-        {
-            tfStart.text = GameData.getLanguage().SearchForChildByTag("start").Text;
-        }
     }
     void Start () {
         SocialManager.GetInstance().Start();

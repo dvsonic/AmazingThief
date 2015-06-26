@@ -444,7 +444,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 456634da5e9825446819e569608cf05a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tfStart: {fileID: 637151105}
   Block: {fileID: 0}
 --- !u!1 &813652416
 GameObject:
