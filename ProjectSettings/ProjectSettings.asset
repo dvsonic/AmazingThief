@@ -12,7 +12,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: Lanhang
-  productName: Jumping Monkey
+  productName: lost forest
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -123,8 +123,8 @@ PlayerSettings:
   iOSLaunchScreenCustomXibPath: 
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 2
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/iconliu/Documents/AmazingThief/user.keystore
+  AndroidKeyaliasName: lostforest
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
   - m_BuildTarget: 
@@ -165,6 +165,9 @@ PlayerSettings:
       m_Size: 36
   m_BuildTargetBatching:
   - m_BuildTarget: iPhone
+    m_StaticBatching: 1
+    m_DynamicBatching: 1
+  - m_BuildTarget: Android
     m_StaticBatching: 1
     m_DynamicBatching: 1
   webPlayerTemplate: APPLICATION:Default
@@ -209,7 +212,7 @@ PlayerSettings:
   psp2TrophyPackagePath: 
   psp2PackagedResourcesPath: 
   flashStrippingLevel: 2
-  spritePackerPolicy: 
+  spritePackerPolicy: TightPackerPolicy
   scriptingDefineSymbols:
     1: CROSS_PLATFORM_INPUT
     2: CROSS_PLATFORM_INPUT

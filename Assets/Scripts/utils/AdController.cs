@@ -3,13 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Text;
 
 public class AdController : MonoBehaviour
 {
 
+    public enum ADInventor { iad, admob };
+    public static ADInventor bannerInventor;
+    public static ADInventor interstitialInventor;
     // Use this for initialization
     public string adConfig;
-    public ADPlatfrom platform;
+    private ADPlatform platform;
     public static bool admob_show;
     private static bool isShow;
     private ADConfig selfAD;
@@ -28,21 +32,22 @@ public class AdController : MonoBehaviour
             isLoad = true;
             Quit();
         }
+#if UNITY_IOS
+        platform = ADPlatform.ios_admob;
+#else
+        platform = ADPlatform.ad_admob;
+#endif
     }
 
-    private List<ADConfig> adList;
     IEnumerator LoadConfig()
     {
-        adList = new List<ADConfig>();
-        Debug.Log("Start:" + Time.time);
         WWW w = new WWW(adConfig);
         yield return w;
-        Debug.Log("Finish:" + Time.time);
-        string config = w.text;
         if (string.IsNullOrEmpty(w.text))
         {
             Debug.Log("load config error");
-            string adconfig = Resources.Load("config/adconfig").ToString();
+            TextAsset data = Resources.Load("config/adconfig") as TextAsset;
+            string adconfig = Encoding.UTF8.GetString(data.bytes);
             PhaseConfig(adconfig);
         }
         else
@@ -87,6 +92,15 @@ public class AdController : MonoBehaviour
                     Debug.Log("image/ad/" + selfAD.image.Split('.')[0] + "load Error");
             }
         }
+
+
+#if UNITY_IOS && !UNITY_EDITOR
+        bannerInventor = ADInventor.iad;
+        interstitialInventor = ADInventor.iad;
+#else
+        bannerInventor = ADInventor.admob;
+        interstitialInventor = ADInventor.admob;
+#endif
     }
 
     IEnumerator LoadImage(string url)
@@ -143,10 +157,10 @@ public class AdController : MonoBehaviour
         }
     }
 }
-public enum ADPlatfrom { ios, ios_admob, ad, ad_admob };
+public enum ADPlatform { ios, ios_admob, ad, ad_admob };
 public struct ADConfig
 {
-    public ADPlatfrom platfrom;
+    public ADPlatform platfrom;
     public string image;
     public string url;
     public int start_show;//内置广告开关

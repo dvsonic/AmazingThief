@@ -405,8 +405,6 @@ GameObject:
   - 92: {fileID: 593435600}
   - 124: {fileID: 593435599}
   - 81: {fileID: 593435598}
-  - 114: {fileID: 593435603}
-  - 114: {fileID: 593435604}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -479,28 +477,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &593435603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 593435597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 195bce50d9faf9649af54f5e3e0774db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &593435604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 593435597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00cc442df4f0f68488def84698dab65f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &640489019
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +551,7 @@ GameObject:
   - 114: {fileID: 1067266681}
   - 114: {fileID: 1067266685}
   - 114: {fileID: 1067266686}
+  - 114: {fileID: 1067266687}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -696,6 +673,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   unitId: ca-app-pub-1392235012379391/8389384463
+--- !u!114 &1067266687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1067266680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e485c36fb28824459bc2126b4ba1b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!1 &1119576497
 GameObject:
   m_ObjectHideFlags: 0

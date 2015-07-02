@@ -136,6 +136,8 @@ public class ThiefController : MonoBehaviour {
         }
         if(coll.gameObject.tag == "BottomBlock")
         {
+            if (_hitList.Count > 1 && _hitList.Count % 10 == 0)
+                speed *= 1.1f;
             if (ground)
                 ground.Play();
             if (run && !run.isPlaying)
@@ -156,12 +158,15 @@ public class ThiefController : MonoBehaviour {
             }
             else
             {
+
                 if (dead)
                     dead.Play();
+                if (run && run.isPlaying)
+                    run.Stop();
                 GetComponent<Animator>().SetBool("isDead", true);
                 jumpState = JUMP_STATE.DEAD;
                 speed = 0;
-                //gameObject.rigidbody2D.GetComponent<BoxCollider2D>().enabled = false;
+                gameObject.rigidbody2D.GetComponent<BoxCollider2D>().enabled = false;
                 //gameObject.rigidbody2D.velocity = new Vector2(0, -5);
                 Camera.main.GetComponent<CameraShake>().Shake();
                 StartCoroutine(GameEnd());

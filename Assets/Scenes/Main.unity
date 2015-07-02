@@ -160,7 +160,7 @@ AudioSource:
   m_GameObject: {fileID: 15899858}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: ca93cf99dccb08448a12e05268e3c55a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5e785f27c610742408bbdf849e025eb6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1639,6 +1639,7 @@ GameObject:
   - 114: {fileID: 1312669567}
   - 114: {fileID: 1312669566}
   - 114: {fileID: 1312669570}
+  - 114: {fileID: 1312669571}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1749,6 +1750,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   unitId: ca-app-pub-1392235012379391/5435918069
+--- !u!114 &1312669571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1312669564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e485c36fb28824459bc2126b4ba1b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &1347259642
 GameObject:
   m_ObjectHideFlags: 0
@@ -2383,7 +2396,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 2
+  m_GravityScale: 4
   m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2439,9 +2452,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a77c2d108240564e827bed590d3aead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  jumpSpeed: 10
-  jumpSpeed2: 10
+  speed: 3.5
+  jumpSpeed: 15
+  jumpSpeed2: 15
   factoryList:
   - {fileID: 734637308}
   endlessBlock: {fileID: 1086099569}
